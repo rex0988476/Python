@@ -1,5 +1,6 @@
 # Python
 All Python projects are in here
+
 ---  
 pre-install:numpy & opencv  
 type on terminal  
