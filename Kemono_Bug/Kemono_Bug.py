@@ -413,7 +413,7 @@ def download_img_4():
     while i<len(dataIdLengthList):
         while j<dataIdLengthList[i]:
             print("downloading img in id "+str(dataIdList[i])+": "+str(j+1)+"/"+str(dataIdLengthList[i])+"...")
-            print("https://kemono.party"+imgLinkList[k]+" ("+str(k)+"/"+str(len(imgLinkList))+")\n")
+            print("https://kemono.party"+imgLinkList[k]+" ("+str(k+1)+"/"+str(len(imgLinkList))+")\n")
             jpgName = dataIdList[i]+"_"+str(j)+".jpg"
             f = open(ARTIST_NAME+"_images\\"+jpgName,'wb')
             response = requests.get('https://kemono.party'+imgLinkList[k])
