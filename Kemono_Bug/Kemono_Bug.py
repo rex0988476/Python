@@ -27,31 +27,63 @@ def welcome():
 
 def select_artist_1():
     print("{select_artist} START.")
-    if os.path.isfile("Artist_List.txt"):
-        f = open("Artist_List.txt","r")
+
+    if not os.path.exists("./data"):
+        os.mkdir("./data")
+
+    if os.path.isfile("./data\\Artist_List.txt"):
+        f = open("./data\\Artist_List.txt","r")
     else:
         exit("#####LOAD_ERROR:<Artist_List> in {select_artist}")
 
-    id=f.readline().strip()
-    NameList=[]
     IdList=[]
-    while id!="":
+    NameList=[]
+    TypeList=[]
+    Fanbox_length=int(f.readline().strip())
+    Patreon_length=int(f.readline().strip())
+    i=0
+    bandonLine=f.readline()
+    while i<Fanbox_length:
+        bandonLine=f.readline()
+        id=f.readline().strip()
         IdList.append(id)
         name=f.readline().strip()
         NameList.append(name)
+        type=f.readline().strip()
+        TypeList.append(type)
+        i+=1
+    i=0
+    bandonLine=f.readline()
+    while i<Patreon_length:
+        bandonLine=f.readline()
         id=f.readline().strip()
+        IdList.append(id)
+        name=f.readline().strip()
+        NameList.append(name)
+        type=f.readline().strip()
+        TypeList.append(type)
+        i+=1
     f.close()
 
-    print("------------------------------")
-    i=0
-    while i<len(NameList):
-        print("["+str(i+1)+"] => "+NameList[i]+", "+IdList[i])
-        i+=1
+    if Fanbox_length>0:
+        print("---------------Fanbox---------------")
+        i=0
+        j=0
+        while i<Fanbox_length:
+            print("["+str(i+1)+"] => "+NameList[i]+", "+IdList[i])
+            i+=1
+    if Patreon_length>0:
+        print("---------------Patreon--------------")
+        j=0
+        while j<Patreon_length:
+            print("["+str(i+1)+"] => "+NameList[i]+", "+IdList[i])
+            i+=1
+            j+=1
     print("[q] => Quit")
-    print("------------------------------")
-
     ARTIST_ID=""
     ARTIST_NAME=""
+    ARTIST_TYPE=""
+    selected=0
     while True:
         select=input("Select Artist:")
         i=0
@@ -62,33 +94,35 @@ def select_artist_1():
             if str(i+1) == select:
                 ARTIST_ID=IdList[int(select)-1]
                 ARTIST_NAME=NameList[int(select)-1]
+                ARTIST_TYPE=TypeList[int(select)-1]
+                selected=1
                 break
             i+=1
         
-        if str(i+1) == select:
+        if selected==1:
             break
         
         print("Invalid number , Please type again...")
-        
 
-    if os.path.isfile("Artist_info.txt"):
-        os.remove("Artist_info.txt")
+    if os.path.isfile("./data\\Artist_info.txt"):
+        os.remove("./data\\Artist_info.txt")
 
-    f = open("Artist_info.txt","w")
+    f = open("./data\\Artist_info.txt","w")
     f.write(ARTIST_ID+"\n")
     f.write(ARTIST_NAME+"\n")
+    f.write(ARTIST_TYPE+"\n")
     f.close()
 
-    if os.path.isfile("subpage_id.txt"):
-        os.remove("subpage_id.txt")
+    if os.path.isfile("./data\\subpage_id.txt"):
+        os.remove("./data\\subpage_id.txt")
 
-    if os.path.isfile("img_link_log.txt"):
-        os.remove("img_link_log.txt")
+    if os.path.isfile("./data\\img_link_log.txt"):
+        os.remove("./data\\img_link_log.txt")
 
-    if os.path.isfile("download_Log.txt"):
-        os.remove("download_Log.txt")
+    if os.path.isfile("./data\\download_Log.txt"):
+        os.remove("./data\\download_Log.txt")
 
-    L=glob("*_imgLink.txt")
+    L=glob("./data\\*_imgLink.txt")
     i=0
     while i<len(L):
         os.remove(L[i])
@@ -101,21 +135,21 @@ def get_subpage_id_2():
     print("{get_subpage_id} START.")
     #ARTIST####
 
-    if os.path.isfile("Artist_info.txt"):
-        f = open("Artist_info.txt","r")
+    if os.path.isfile("./data\\Artist_info.txt"):
+        f = open("./data\\Artist_info.txt","r")
+        ARTIST_ID=f.readline().strip()
+        ARTIST_NAME=f.readline().strip()
+        ARTIST_TYPE=f.readline().strip()
     else:
         exit("#####LOAD_ERROR:<ARTIST_info> in {get_subpage_id}")
-
-
-    ARTIST_ID=f.readline().strip()
-    ARTIST_NAME=f.readline().strip()
+    
     f.close()
     #ARTIST####
 
     #Calculate subpage number & last webpage number & last webpage start at##########################################################
     print("[Calculate subpage number & last webpage number & last webpage start at]...")
 
-    response = requests.get(f"https://kemono.party/fanbox/user/"+ARTIST_ID+"/")
+    response = requests.get(f"https://kemono.party/"+ARTIST_TYPE+"/user/"+ARTIST_ID+"/")
     soup = BeautifulSoup(response.text, "html.parser")
     titles = soup.find_all("small")
     text=titles[0].getText()
@@ -154,10 +188,10 @@ def get_subpage_id_2():
     i = 0
     printi=0
 
-    f=open("subpage_id.txt","w")
+    f=open("./data\\subpage_id.txt","w")
     while page<=lastO:
         strpage=str(page)
-        response = requests.get(f"https://kemono.party/fanbox/user/"+ARTIST_ID+"/?o="+strpage)
+        response = requests.get(f"https://kemono.party/"+ARTIST_TYPE+"/user/"+ARTIST_ID+"/?o="+strpage)
         soup = BeautifulSoup(response.text, "html.parser")
         titles = soup.find_all("article")
         for title in titles:
@@ -180,21 +214,22 @@ def get_img_link_3():
     print("{get_img_link} START.")
     #ARTIST####
 
-    if os.path.isfile("Artist_info.txt"):
-        f = open("Artist_info.txt","r")
+    if os.path.isfile("./data\\Artist_info.txt"):
+        f = open("./data\\Artist_info.txt","r")
     else:
         exit("#####LOAD_ERROR:<ARTIST_info> in {get_img_link}")
 
 
     ARTIST_ID=f.readline().strip()
     ARTIST_NAME=f.readline().strip()
+    ARTIST_TYPE=f.readline().strip()
     f.close()
     #ARTIST####
 
     #subpage_id####
     subpageIdList=[]
-    if os.path.isfile("subpage_id.txt"):
-        f = open("subpage_id.txt","r")
+    if os.path.isfile("./data\\subpage_id.txt"):
+        f = open("./data\\subpage_id.txt","r")
     else:
         exit("#####LOAD_ERROR:<subpage_id> in {get_img_link}")
 
@@ -213,18 +248,15 @@ def get_img_link_3():
     j = 0
     R = []
     data_id = []
-    data_id_i = 0
     R_length = []
-    R_lengthi = 0
-    R_length_length = 0
     sum=0
     realSum=0
     preLogNumber=0
     delnum=0
     idLen=0
     delNumNotEqualTo2=[]
-    if os.path.isfile("img_link_log.txt"):
-        f=open("img_link_log.txt","r")
+    if os.path.isfile("./data\\img_link_log.txt"):
+        f=open("./data\\img_link_log.txt","r")
         preLogi=f.readline().strip()
         i=0
         while preLogi!="":
@@ -238,7 +270,7 @@ def get_img_link_3():
             preLogi=f.readline().strip()
         f.close()
 
-    f=open("img_link_log.txt","a")
+    f=open("./data\\img_link_log.txt","a")
     i=preLogNumber
     while i<len(subpageIdList):
         if i==preLogNumber:
@@ -246,7 +278,7 @@ def get_img_link_3():
         R_length_length = 0
         idLen = 0
         delnum = 0
-        response = requests.get(f"https://kemono.party/fanbox/user/"+ARTIST_ID+"/post/"+subpageIdList[i])
+        response = requests.get(f"https://kemono.party/"+ARTIST_TYPE+"/user/"+ARTIST_ID+"/post/"+subpageIdList[i])
         data_id.append(subpageIdList[i])
         soup = BeautifulSoup(response.text, "html.parser")
         results = soup.find_all("img",loading="lazy")
@@ -301,7 +333,7 @@ def get_img_link_3():
     #write file##########################################################
     print("[Write file]...")
 
-    f=open(ARTIST_NAME+"_imgLink.txt","w")
+    f=open("./data\\"+ARTIST_NAME+"_imgLink.txt","w")
 
     f.write(str(len(R))+"\n")
     f.write(str(len(subpageIdList))+"\n")
@@ -332,13 +364,14 @@ def get_img_link_3():
 def download_img_4():
     print("{download_img} START.")
         
-    if os.path.isfile("Artist_info.txt"):
-        f = open("Artist_info.txt","r")
+    if os.path.isfile("./data\\Artist_info.txt"):
+        f = open("./data\\Artist_info.txt","r")
     else:
         exit("#####LOAD_ERROR:<ARTIST_info> in {download_img}")
 
     ARTIST_ID=f.readline().strip()
     ARTIST_NAME=f.readline().strip()
+    ARTIST_TYPE=f.readline().strip()
     f.close()
     print("[Load img link file]...")
 
@@ -346,8 +379,8 @@ def download_img_4():
     dataIdList = []
     dataIdLengthList = []
 
-    if os.path.isfile(ARTIST_NAME+"_imgLink.txt"):
-        f = open(ARTIST_NAME+"_imgLink.txt","r")
+    if os.path.isfile("./data\\"+ARTIST_NAME+"_imgLink.txt"):
+        f = open("./data\\"+ARTIST_NAME+"_imgLink.txt","r")
     else:
         exit("#####LOAD_ERROR:<"+ARTIST_NAME+"_imgLink> in {download_img}")
 
@@ -384,12 +417,12 @@ def download_img_4():
 
     print("[Download image]...")
 
-    if not os.path.isfile("download_Log.txt"):
-        f = open("download_Log.txt","w")
+    if not os.path.isfile("./data\\download_Log.txt"):
+        f = open("./data\\download_Log.txt","w")
         f.write("0")
         f.close()
 
-    f = open("download_Log.txt","r")
+    f = open("./data\\download_Log.txt","r")
     currentNumber=int(f.readline().strip())
     f.close()
     i=0
@@ -407,19 +440,22 @@ def download_img_4():
         i+=1
         j=0
 
-    if not os.path.exists(ARTIST_NAME+"_images"):
-        os.mkdir(ARTIST_NAME+"_images")
+    if not os.path.exists("./images"):
+        os.mkdir("./images")
+
+    if not os.path.exists("./images/"+ARTIST_NAME+"_"+ARTIST_TYPE):
+        os.mkdir("./images/"+ARTIST_NAME+"_"+ARTIST_TYPE)
     print("Download strat at subpage_id (data_id):"+str(dataIdList[i])+", number:"+str(dataIdLengthList[i])+": "+str(j+1)+"/"+str(dataIdLengthList[i])+"...")
     while i<len(dataIdLengthList):
         while j<dataIdLengthList[i]:
             print("downloading img in id "+str(dataIdList[i])+": "+str(j+1)+"/"+str(dataIdLengthList[i])+"...")
             print("https://kemono.party"+imgLinkList[k]+" ("+str(k+1)+"/"+str(len(imgLinkList))+")\n")
             jpgName = dataIdList[i]+"_"+str(j)+".jpg"
-            f = open(ARTIST_NAME+"_images\\"+jpgName,'wb')
+            f = open("./images/"+ARTIST_NAME+"_"+ARTIST_TYPE+"\\"+jpgName,'wb')
             response = requests.get('https://kemono.party'+imgLinkList[k])
             f.write(response.content)
             f.close()
-            f = open("download_Log.txt","w")
+            f = open("./data\\download_Log.txt","w")
             downloadnumber+=1
             f.write(str(downloadnumber))
             f.close()
@@ -436,19 +472,19 @@ def download_img_4():
 
 def delete_process_file_5():
     print("{delete_process_file} START.")
-    if os.path.isfile("Artist_info.txt"):
-        os.remove("Artist_info.txt")
+    if os.path.isfile("./data\\Artist_info.txt"):
+        os.remove("./data\\Artist_info.txt")
 
-    if os.path.isfile("subpage_id.txt"):
-        os.remove("subpage_id.txt")
+    if os.path.isfile("./data\\subpage_id.txt"):
+        os.remove("./data\\subpage_id.txt")
 
-    if os.path.isfile("img_link_log.txt"):
-        os.remove("img_link_log.txt")
+    if os.path.isfile("./data\\img_link_log.txt"):
+        os.remove("./data\\img_link_log.txt")
 
-    if os.path.isfile("download_Log.txt"):
-        os.remove("download_Log.txt")
+    if os.path.isfile("./data\\download_Log.txt"):
+        os.remove("./data\\download_Log.txt")
 
-    L=glob("*_imgLink.txt")
+    L=glob("./data\\*_imgLink.txt")
     i=0
     while i<len(L):
         os.remove(L[i])       
