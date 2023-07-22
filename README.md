@@ -2,6 +2,16 @@
 All Python projects are in here
 
 ---  
-web crawler
+Web crawler
 ---
+
+OpenCV
+---
+
+Pygame
+---
+
+Python+SQL
+---
+
 
