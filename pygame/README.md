@@ -2,4 +2,4 @@ pygame
 ===
 space war
 ---
-![start]([https://drive.google.com/file/d/14cQVOHJYe-sZhLWtVOUWDn5i4WCG_giU/view?usp=drive_link] "游標顯示")
+![start](https://github.com/rex0988476/Python/blob/main/pygame/space%20war/readme_file/start.png?raw=true)
