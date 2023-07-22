@@ -1,4 +1,4 @@
-pygame
+Pygame
 ===
 space war
 ---
