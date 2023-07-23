@@ -1,0 +1,10 @@
+USER,https://osu.ppy.sh/users/11426995
+NM1,https://osu.ppy.sh/beatmaps/2454812
+NM2,https://osu.ppy.sh/beatmaps/3483765
+NM3,https://osu.ppy.sh/beatmaps/3236997
+HD1,https://osu.ppy.sh/beatmaps/4167094
+HD2,https://osu.ppy.sh/beatmaps/442940
+HR1,https://osu.ppy.sh/beatmaps/3048300
+HR2,https://osu.ppy.sh/beatmaps/2341128
+DT1,https://osu.ppy.sh/beatmaps/2362090
+FM1,https://osu.ppy.sh/beatmaps/3453233
