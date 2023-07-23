@@ -2,16 +2,25 @@
 All Python projects are in here
 
 ---  
-Web crawler
+firstpy
 ---
+first time use Python
 
-OpenCV
+Kemono_Bug
 ---
+web crawler
 
-Pygame
+opcv
 ---
+first time use OpenCV
 
-Python+SQL
+space war
 ---
+first time use pygame
+
+python connect SQL
+---
+use python to connect MySQL database
+
 
 
