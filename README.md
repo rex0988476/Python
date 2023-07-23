@@ -4,6 +4,7 @@ All Python projects are in here
 ---  
 firstpy
 ---
+first time use Python
 
 Kemono_Bug
 ---
@@ -19,6 +20,7 @@ first time use pygame
 
 python connect SQL
 ---
+use python to connect MySQL database
 
 
 
