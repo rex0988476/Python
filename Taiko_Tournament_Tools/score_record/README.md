@@ -3,7 +3,7 @@
 ## Description
 Score record GUI.
 * rank color  
-![image] "rank color")
+![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/score_record/README/rank_color.png "rank color")
 ## Requirement
 * Python
 * PyQt5
