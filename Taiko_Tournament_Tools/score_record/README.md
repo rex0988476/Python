@@ -2,6 +2,8 @@
 
 ## Description
 Score record GUI.
+* rank  
+
 
 ## Requirement
 * Python
@@ -18,3 +20,4 @@ Then it should open a GUI as shown below.
 The remaining functions will be shown in the demo.  
 ## Demo
 [demo](https://youtu.be/xRVFzxDv4sg "demo")
+
