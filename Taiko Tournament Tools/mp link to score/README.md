@@ -23,7 +23,7 @@ USER,[player link]
 * `[x]` should start from 1 in ascending order.
 * `[map link x]` should start at `https://osu.ppy.sh/beatmaps/...`  
 * example:
-
+![setup](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/setup.png)  
 
 warning: 
 
