@@ -19,7 +19,7 @@ USER,[player link]
 ...   
 ```
 * `[player link]` is your osu profile link.  
-* `[map mod name x]` should be one of `NM`, `HD`, `HR`, `DT`, `FM`, `TB`. The order from top to bottom should be NM, HD, HR, DT, FM, TB. If there is no such mod then leave it blank.
+* `[map mod name x]` should be one of `NM`, `HD`, `HR`, `DT`, `FM`, `TB`. The order from top to bottom should be `NM`, `HD`, `HR`, `DT`, `FM`, `TB`. If there is no such mod then leave it blank.
 * `[x]` should start from 1 in ascending order.
 * `[map link x]` should start at `https://osu.ppy.sh/beatmaps/...`
 ex:
