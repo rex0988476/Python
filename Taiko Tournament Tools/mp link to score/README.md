@@ -11,6 +11,7 @@ Given the multi play link, map mod name, map link and player link, you can get t
 
 ## Usage  
 1  2  3
+4
 ### input:
 * mplink.txt
 * setup.txt
