@@ -19,5 +19,5 @@ Then it should open a GUI as shown below.
 ![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/score_record/README/gui_start.png "gui start")  
 The remaining functions will be shown in the demo.  
 ## Demo
-[demo](https://youtu.be/xRVFzxDv4sg "demo")
+[demo](https://youtu.be/Ce59pWVRp88 "demo")
 
