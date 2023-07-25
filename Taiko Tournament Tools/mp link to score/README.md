@@ -5,10 +5,8 @@ Given the multi play link, map mod name, map link and player link, you can get t
 
 ## Usage
 ### input:
-
 * mplink.txt
-format:
-    hi
-
 * setup.txt
+### output:
+* mp score.txt
 
