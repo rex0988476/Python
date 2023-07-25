@@ -3,13 +3,13 @@
 ## Description
 Score record GUI.
 * rank color  
-firse place ![image]"")  
-second place ![image]"")  
-third place ![image]"")  
+firse place ![image] "#FFD700")  
+second place ![image] "#C0C0C0")  
+third place ![image] "#B87333")  
 ...  
-the third to last ![image]"")  
-the second to last ![image]"")  
-last ![image]"")  
+the third to last ![image] "#FFB5B5")  
+the second to last ![image] "#FF5151")  
+last ![image] "#750000")  
 ## Requirement
 * Python
 * PyQt5
