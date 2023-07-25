@@ -119,7 +119,7 @@ class MyWidget(QtWidgets.QWidget):
 
 		#create row
 		self.diff_create_btn=QtWidgets.QPushButton(self)
-		self.diff_create_btn.setText('Add diff')
+		self.diff_create_btn.setText('Add mod')
 		self.diff_create_btn.setStyleSheet(self.style_btn)
 		self.diff_create_btn.clicked.connect(self.create_new_diff)
 
@@ -176,7 +176,7 @@ class MyWidget(QtWidgets.QWidget):
 		self.current_show_diff_type_box=QtWidgets.QComboBox(self)
 		#delete row
 		self.diff_delete_btn=QtWidgets.QPushButton(self)
-		self.diff_delete_btn.setText('Delete diff')
+		self.diff_delete_btn.setText('Delete mod')
 		self.diff_delete_btn.setStyleSheet(self.style_btn)
 		self.diff_delete_btn.clicked.connect(self.delete_diff)
 
