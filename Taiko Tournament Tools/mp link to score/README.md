@@ -10,6 +10,7 @@ Given the multi play link, map mod name, map link and player link, you can get t
 * newest webdriver version
 
 ## Usage
+0. Download this project and unzip it.  
 1. Open `setup.txt`, use the following format to fill in the player link, map mod name and map link.  
 ```
 USER,[player link]
@@ -27,5 +28,7 @@ USER,[player link]
 2. Open `mplink.txt`, paste one multi play link.
 * example:  
 ![setup](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/mplink.png)  
-3. Use `python mp_link_to_score.py` to execute program. It should produce `mp score.txt` as output.  
-
+3. Make sure you are at the location where `mp_link_to_score.py` is. Then open terminal, use following statement to execute program. It should produce `mp score.txt` as output.
+```
+python mp_link_to_score.py  
+```
