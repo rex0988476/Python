@@ -32,3 +32,4 @@ USER,[player link]
 ```
 python mp_link_to_score.py  
 ```
+4. Open `mp score.txt` and you will see the player's play score in the map from the multi play link.
