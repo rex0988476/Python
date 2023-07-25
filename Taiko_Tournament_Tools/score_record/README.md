@@ -2,7 +2,7 @@
 
 ## Description
 Score record GUI.
-* rank  
+* rank color  
 
 
 ## Requirement
