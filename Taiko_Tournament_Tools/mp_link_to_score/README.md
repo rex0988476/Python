@@ -22,7 +22,7 @@ USER,[player link]
 * `[player link]` is your osu profile link.  
 * `[map mod name x]` should be one of `NM`, `HD`, `HR`, `DT`, `FM`, `TB`. The order from top to bottom should be `NM`, `HD`, `HR`, `DT`, `FM`, `TB`. If there is no such mod then leave it blank.
 * `[x]` should start from 1 in ascending order.
-* `[map link x]` should start at `https://osu.ppy.sh/beatmaps/...`  
+* `[map link x]` should start at `https://osu.ppy.sh/beatmaps/...`.  
 * example:  
 ![setup](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/mp_link_to_score/README/setup.png)  
 2. Open `mplink.txt`, paste one multi play link.
