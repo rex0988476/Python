@@ -36,4 +36,4 @@ python mp_link_to_score.py
 * example:  
 ![mp score](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/mp%20score.png)
 ## Demo
-[![IMAGE ALT TEXT(http://img.youtube.com/vi/HeoxKrUldXw/0.jpg)]](https://www.youtube.com/watch?v=HeoxKrUldXw "Demo")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/HeoxKrUldXw/0.jpg)](https://www.youtube.com/watch?v=HeoxKrUldXw "Demo")
