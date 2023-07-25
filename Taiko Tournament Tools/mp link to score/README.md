@@ -9,7 +9,8 @@ Given the multi play link, map mod name, map link and player link, you can get t
 * selenium
 * newest webdriver version
 
-## Usage
+## Usage  
+1  
 ### input:
 * mplink.txt
 * setup.txt
