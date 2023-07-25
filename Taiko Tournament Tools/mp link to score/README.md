@@ -4,10 +4,10 @@
 Given the multi play link, map mod name, map link and player link, you can get the player's play score in the map from the multi play link.
 
 ## Requirement
-Python
-BeautifulSoup
-selenium
-newest webdriver version
+* Python
+* BeautifulSoup
+* selenium
+* newest webdriver version
 
 ## Usage
 ### input:
