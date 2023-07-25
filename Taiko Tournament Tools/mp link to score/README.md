@@ -1,5 +1,4 @@
-mp link to score
-===
+#mp link to score
 
 Usage
 ---
@@ -9,3 +8,4 @@ mplink.txt:
 [mplink]
 
 setup.txt:
+
