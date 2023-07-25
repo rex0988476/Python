@@ -27,5 +27,5 @@ USER,[player link]
 2. Open `mplink.txt`, paste one multi play link.
 * example:  
 ![setup](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/mplink.png)  
-
+3. Use `python mp_link_to_score.py` to execute program. It should produce `mp score.txt` as output.  
 
