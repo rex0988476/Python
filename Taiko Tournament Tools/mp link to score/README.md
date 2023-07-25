@@ -3,8 +3,7 @@
 ## Usage
 ### input:
 
-* mplink.txt:
-[mplink]
+* mplink.txt
 
-* setup.txt:
+* setup.txt
 
