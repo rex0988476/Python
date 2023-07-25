@@ -4,8 +4,8 @@
 ### input:
 
 * mplink.txt
- format:
-     hi
+format:
+    hi
 
 * setup.txt
 
