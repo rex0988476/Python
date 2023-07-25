@@ -17,9 +17,9 @@ USER,[player link]
 [map mod name 2],[map link 2]  
 ...   
 ```
-* [player link] is your osu profile link.  
-* The name of [map mod name `x`] should be one of NM, HD, HR, DT, FM, TB. The order from top to bottom should be NM, HD, HR, DT, FM, TB. If there is no such mod then leave it blank. `x` should start from 1 in ascending order.
-* [map link `x`] should  
+* `[player link]` is your osu profile link.  
+* The name of `[map mod name x]` should be one of NM, HD, HR, DT, FM, TB. The order from top to bottom should be NM, HD, HR, DT, FM, TB. If there is no such mod then leave it blank. `x` should start from 1 in ascending order.
+* `[map link x]` should  
 ex:
 
 warning: 
