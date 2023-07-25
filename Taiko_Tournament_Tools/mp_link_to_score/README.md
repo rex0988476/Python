@@ -10,7 +10,7 @@ Given the multi play link, map mod name, map link and player link, you can get t
 * newest webdriver version
 
 ## Usage
-0. Download this project and unzip it.  
+0. Download this project and unzip it. (You can download only this folder from [here](https://minhaskamal.github.io/DownGit/#/home "DownGit"), just copy and paste this folder's url.)  
 1. Open `setup.txt`, use the following format to fill in the player link, map mod name and map link.  
 ```
 USER,[player link]
