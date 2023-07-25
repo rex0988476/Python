@@ -16,7 +16,14 @@ USER,[player link]
 [map mod name 1],[map link 1]  
 [map mod name 2],[map link 2]  
 ...   
-``` 
+```
+* [player link] is your osu profile link
+* The name of [map mod name `x`] should be one of NM, HD, HR, DT, FM, TB and the order from top to bottom should be NM, HD, HR, DT, FM, TB. If there is no such mod, then leave it blank
+* [map link `x`] should  
+ex:
+
+warning: 
+
 * mplink.txt
 * setup.txt
 ### output:
