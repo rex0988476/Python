@@ -133,7 +133,7 @@ class MyWidget(QtWidgets.QWidget):
 		self.info_layout=QtWidgets.QHBoxLayout(self.info_widget)
 
 		self.info_label_diff=QtWidgets.QLabel(self)
-		self.info_label_diff.setText('Diff')
+		self.info_label_diff.setText('Mod')
 		self.info_label_map=QtWidgets.QLabel(self)
 		self.info_label_map.setText('Map')
 		self.info_label_high=QtWidgets.QLabel(self)
