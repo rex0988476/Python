@@ -3,7 +3,7 @@
 ## Description
 Score record GUI.
 * rank color  
-firse place ![image] "#FFD700")  
+firse place ![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/score_record/README/FFD700%20(1).png "#FFD700")  
 second place ![image] "#C0C0C0")  
 third place ![image] "#B87333")  
 ...  
