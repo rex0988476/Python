@@ -1,4 +1,4 @@
-#mp link to score
+# mp link to score
 
 Usage
 ---
