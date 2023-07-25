@@ -35,3 +35,5 @@ python mp_link_to_score.py
 4. Open `mp score.txt` and you will see the player's play score in the map from the multi play link.
 * example:  
 ![mp score](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/mp%20score.png)
+## Demo
+![demo](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/demo.mp4)
