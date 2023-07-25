@@ -24,17 +24,16 @@ USER,[player link]
 * `[x]` should start from 1 in ascending order.
 * `[map link x]` should start at `https://osu.ppy.sh/beatmaps/...`  
 * example:  
-![setup](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/setup.png)  
+![setup](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/mp_link_to_score/README/setup.png)  
 2. Open `mplink.txt`, paste one multi play link.
 * example:  
-![mplink](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/mplink.png)  
+![mplink](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/mp_link_to_score/README/mplink.png)  
 3. Make sure you are at the location where `mp_link_to_score.py` is. Then open terminal, use following statement to execute program. It should produce `mp score.txt` as output.
 ```
 python mp_link_to_score.py  
 ```
 4. Open `mp score.txt` and you will see the player's play score in the map from the multi play link.
 * example:  
-![mp score](https://github.com/rex0988476/Python/blob/main/Taiko%20Tournament%20Tools/mp%20link%20to%20score/README/mp%20score.png)
+![mp score](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/mp_link_to_score/README/mp%20score.png)
 ## Demo
 [demo](https://www.youtube.com/watch?v=HeoxKrUldXw "demo")
->>>>>>> 5dcab5e81a0fea16c0222e40d3fa0ffd84306197:Taiko Tournament Tools/mp link to score/README.md
