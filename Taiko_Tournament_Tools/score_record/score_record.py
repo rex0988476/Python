@@ -1,7 +1,6 @@
 from PyQt5 import QtGui, QtWidgets, QtCore
 import sys
 import os
-import threading
 import statistics
 
 class MyWidget(QtWidgets.QWidget):
