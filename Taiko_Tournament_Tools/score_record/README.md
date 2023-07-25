@@ -14,6 +14,6 @@ Score record GUI.
 python score_record.py  
 ```
 Then it should open a GUI as shown below.  
-[gui_start](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/score_record/README/gui_start.png)  
+![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/score_record/README/gui_start.png "gui start")  
 ## Demo
 [demo](https://www.youtube.com/watch?v=HeoxKrUldXw "demo")
