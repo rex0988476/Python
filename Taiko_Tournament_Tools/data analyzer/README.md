@@ -3,7 +3,7 @@
 ## Description
 Score record analyzer GUI.
 * rank color  
-![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/data_analyzer/README/rank_color.png "rank color")
+![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/data%20analyzer/README/rank_color.png "rank color")
 ## Requirement
 * Python
 * PyQt5
