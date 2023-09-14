@@ -1,9 +1,9 @@
-# score record
+# data analyzer
 
 ## Description
-Score record GUI.
+Score record analyzer GUI.
 * rank color  
-![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/score_record/README/rank_color.png "rank color")
+![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/data_analyzer/README/rank_color.png "rank color")
 ## Requirement
 * Python
 * PyQt5
@@ -15,7 +15,7 @@ Score record GUI.
 python score_record.py  
 ```
 Then it should open a GUI as shown below.  
-![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/score_record/README/gui_start.png "gui start")  
+![image](https://github.com/rex0988476/Python/blob/main/Taiko_Tournament_Tools/data_analyzer/README/gui_start.png "gui start")  
 The remaining functions will be shown in the demo.  
 ## Demo
 [demo](https://youtu.be/Ce59pWVRp88 "demo")
